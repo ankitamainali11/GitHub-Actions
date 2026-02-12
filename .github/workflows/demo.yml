@@ -1,8 +1,13 @@
 name: hello-world
-on: push
+
+on: push 
+
 jobs:
   myjob:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-     - name : my-step
-     run: echo "Hello World"
+      - name: Checkout code 
+        uses: actions/checkout@v4
+
+      - name: my-step
+        run: echo "Hello EVERYONE"
